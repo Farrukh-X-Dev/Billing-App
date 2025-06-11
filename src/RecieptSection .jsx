@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 
 export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
-  const total = receiptItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const total = receiptItems.reduce(
+    (sum, item) => sum + item.price * item.qty,
+    0
+  );
   const printRef = useRef();
 
   const handlePrint = () => {
@@ -13,45 +16,62 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
     });
     const dateString = now.toLocaleDateString("en-US");
 
-    const printWindow = window.open("", "PRINT", "width=320,height=300");
+    const printWindow = window.open("", "PRINT", "width=300,height=600");
 
     printWindow.document.write(`
       <html>
         <head>
           <title>Receipt</title>
-          <style>
-            body {
-              font-family: monospace, Courier, monospace;
-              font-size: 12px;
-              margin: 0;
-              padding: 10px;
-              width: 220px;
-              color: black;
-            }
-            h2, h3 {
-              text-align: center;
-              margin: 0 0 10px 0;
-            }
-            hr {
-              border-top: 1px dashed black;
-              margin: 8px 0;
-            }
-            .item-row {
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 4px;
-            }
-            .total-row {
-              font-weight: bold;
-              border-top: 1px solid black;
-              padding-top: 6px;
-              margin-top: 6px;
-            }
-          </style>
+ <style>
+  @page {
+    size: 58mm auto;
+    margin: 0;
+  }
+
+  @media print {
+    body {
+      margin: 0;
+    }
+  }
+
+  body {
+    font-family: monospace, Courier, monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 5mm 3mm;
+    width: 58mm;
+    color: black;
+    margin-inline : auto ;
+  }
+
+  h2, h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  hr {
+    border-top: 1px dashed black;
+    margin: 8px 0;
+  }
+
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .total-row {
+    font-weight: bold;
+    border-top: 1px solid black;
+    padding-top: 6px;
+    margin-top: 6px;
+  }
+</style>
+
         </head>
         <body>
           <h2>Food Qabila Restaurant</h2>
-          <h3>Zaman Town Korangi 3 , In Bengali Market</h3>
+          <h3>Zaman Town Korangi 3, Bengali Market</h3>
           <h3>Phone: +92 3103493529</h3>
           <hr />
           <div> . . . . . . . . . . . . . . .</div>
@@ -59,9 +79,11 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
           ${receiptItems
             .map(
               (item) =>
-                `<div class="item-row"><span>${item.name} x${item.qty}</span><span>₹${(
-                  item.price * item.qty
-                ).toFixed(2)}</span></div>`
+                `<div class="item-row"><span>${item.name} x${
+                  item.qty
+                }</span><span>₹${(item.price * item.qty).toFixed(
+                  2
+                )}</span></div>`
             )
             .join("")}
           <hr />
@@ -77,11 +99,15 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
             ${dateString}
           </div>
           <p style="text-align:center;">Thank you for your purchase!</p>
-
+  
           <script>
             window.onload = function() {
-              const height = document.body.scrollHeight;
-              window.resizeTo(320, height + 40);
+              const contentHeight = document.body.scrollHeight;
+              window.resizeTo(300, contentHeight + 100);
+              setTimeout(() => {
+                window.print();
+                window.close();
+              }, 300);
             };
           </script>
         </body>
@@ -90,8 +116,6 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
 
     printWindow.document.close();
     printWindow.focus();
-    printWindow.print();
-    printWindow.close();
   };
 
   return (

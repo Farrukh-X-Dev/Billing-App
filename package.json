@@ -26,17 +26,21 @@
     "vite": "^6.3.5",
     "wait-on": "^8.0.3"
   },
-  "build": {
-    "appId": "com.foodqabila.app",
-    "productName": "Food Qabila",
-    "files": [
-      "dist/**/*",
-      "electron.js",
-      "preload.js"
-    ],
-    "icon": "assets/icon.png",
-    "directories": {
-      "buildResources": "assets"
-    }
+ "build": {
+  "appId": "com.foodqabila.app",
+  "productName": "Food Qabila",
+  "files": [
+    "dist/**/*",
+    "electron.js",
+    "preload.js"
+  ],
+  "directories": {
+    "buildResources": "assets"
+  },
+  "win": {
+    "icon": "assets/icon.ico"
+  },
+  "linux": {
+    "icon": "assets/icon.png"
   }
-}
+}} 
