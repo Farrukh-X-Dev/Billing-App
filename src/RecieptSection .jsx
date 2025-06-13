@@ -66,6 +66,10 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
     padding-top: 6px;
     margin-top: 6px;
   }
+  .dotted-line {
+    border-bottom: 2px dotted #999;
+    margin: 20px 0;
+  }
 </style>
 
         </head>
@@ -73,9 +77,7 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
           <h2>Food Qabila Restaurant</h2>
           <h3>Zaman Town Korangi 3, Bengali Market</h3>
           <h3>Phone: +92 3103493529</h3>
-          <hr />
-          <div> . . . . . . . . . . . . . . .</div>
-          <hr />
+          <div class="dotted-line"></div>
           ${receiptItems
             .map(
               (item) =>
@@ -86,14 +88,11 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
                 )}</span></div>`
             )
             .join("")}
-          <hr />
           <div class="total-row">
             <span>Total:</span>
             <span>₹${total.toFixed(2)}</span>
           </div>
-          <hr />
-          <div> . . . . . . . . . . . . . . .</div>
-          <hr />
+          <div class="dotted-line"> </div>
           <div style="text-align: center;"> 
             ${timeString} <br />
             ${dateString}
