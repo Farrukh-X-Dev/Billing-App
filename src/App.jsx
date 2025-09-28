@@ -30,7 +30,7 @@ const App = () => {
   };
 
   return (
-<div className="h-screen bg-[#b43129] text-white font-sans flex">
+<div className=" bg-[#b43129] text-white font-sans flex">
   {/* Left Section - Logo + Receipt (1/3) */}
   <div className="flex flex-col space-y-6 w-1/3 px-4">
     <div className="flex flex-row items-center pt-4">

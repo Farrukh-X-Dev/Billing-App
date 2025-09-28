@@ -29,10 +29,10 @@ export const SearchSection = ({ searchResults, setSearchResults, onAddItem }) =>
   }, []);
 
   return (
-    <div className="bg-[#fef1e6] text-black rounded-lg p-4 w-full overflow-y-auto max-h-screen">
+    <div className="bg-[#fef1e6] text-black rounded-lg p-4 w-full overflow-auto max-h-screen">
       <input
         type="text"
-        placeholder=" Enter dish name... 🔍"
+        placeholder=" Enter dish name... "
         onChange={handleSearch}
         className="w-full p-2 mb-4 rounded border border-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-200"
       />

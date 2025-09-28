@@ -83,14 +83,14 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
               (item) =>
                 `<div class="item-row"><span>${item.name} x${
                   item.qty
-                }</span><span>₹${(item.price * item.qty).toFixed(
+                }</span><span>Rs${(item.price * item.qty).toFixed(
                   2
                 )}</span></div>`
             )
             .join("")}
           <div class="total-row">
             <span>Total:</span>
-            <span>₹${total.toFixed(2)}</span>
+            <span>Rs${total.toFixed(2)}</span>
           </div>
           <div class="dotted-line"> </div>
           <div style="text-align: center;"> 
@@ -145,7 +145,7 @@ export const ReceiptSection = ({ receiptItems, onClearReceipt }) => {
           <hr className="my-2" />
           <div className="flex justify-between font-bold text-lg">
             <span>Total:</span>
-            <span>₹{total.toFixed(2)}</span>
+            <span>Rs{total.toFixed(2)}</span>
           </div>
           <button
             className="mt-4 bg-red-600 text-white w-full py-2 rounded flex items-center justify-center cursor-pointer"
