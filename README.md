@@ -1,12 +1,29 @@
-# React + Vite
+# 🍽️ Food Qabila – Restaurant Billing & Receipt App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)  
+![Vite](https://img.shields.io/badge/Vite-6.3-646cff?logo=vite&logoColor=white)  
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1-38b2ac?logo=tailwind-css&logoColor=white)  
+![Electron](https://img.shields.io/badge/Electron-36-47848F?logo=electron&logoColor=white)  
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Farrukh-X-Dev/Billing-App?label=Latest%20Release)  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Food Qabila** is a cross-platform billing and receipt management application for restaurants.  
+It comes with both a **web version** and a **desktop version **, built using **React, Vite, TailwindCSS, and Electron**.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- Generate and manage customer receipts
+- One-click print/export options  
+- Cross-platform:  
+  - Web app (hosted on Netlify)  
+  - Desktop app (Windows/Linux installer via Electron)  
+- Fast performance with Vite + React 19  
+
+---
+
+## 👨‍💻 Author
+
+Developed by Farrukh Noman
+

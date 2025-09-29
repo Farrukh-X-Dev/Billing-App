@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -26,21 +27,22 @@
     "vite": "^6.3.5",
     "wait-on": "^8.0.3"
   },
- "build": {
-  "appId": "com.foodqabila.app",
-  "productName": "Food Qabila",
-  "files": [
-    "dist/**/*",
-    "electron.js",
-    "preload.js"
-  ],
-  "directories": {
-    "buildResources": "assets"
-  },
-  "win": {
-    "icon": "assets/icon.ico"
-  },
-  "linux": {
-    "icon": "assets/icon.png"
+  "build": {
+    "appId": "com.foodqabila.app",
+    "productName": "Food Qabila",
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "icon": "assets/icon.png"
+    }
   }
-}} 
+}
